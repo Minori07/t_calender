@@ -12,7 +12,7 @@ class MembersController < ApplicationController
 
   def list
   	@members = target_date params[:date]
-  	@date = params[:date]
+  	@date = DateTime.parse(params[:date])
   	@member = Member.new
   end
 

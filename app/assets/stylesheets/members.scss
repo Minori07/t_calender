@@ -44,8 +44,12 @@ li{
 }
 .calender td{
 	background-color: #fafafa;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 	font-size: 12px;
+}
+.calender p{
+	padding: 10px;
+	color: gray;
 }
 
 .m_list table{
@@ -71,7 +75,8 @@ li{
 
 .join{
 	background-color: #66cdaa;
-	margin: 20px 25%;
+	margin-top: 20%;
+	margin-left: 25%;
 	border-radius: 10px;
 	width: 50%;
 	text-align: center;

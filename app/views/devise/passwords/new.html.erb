@@ -1,16 +1,20 @@
-<h2>Forgot your password?</h2>
+<div class="top">
+	<div class="icon"><%= image_tag "icon.png" %></div>
+<h2>パスワードを忘れたとき</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,style: "background-color: white;border-radius: 5px;margin-bottom: 10px;color:gray;"%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "パスワード再設定を行う(click)" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+<%= link_to 'Topページ', home_index_path %>
+</div>

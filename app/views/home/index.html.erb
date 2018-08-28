@@ -1,0 +1,9 @@
+<div class="top">
+	<div class="icon"><%= image_tag "icon.png" %></div>
+	<h3>ようこそ</h3>
+	<% if !user_signed_in? %>
+	<%= image_tag "triangle.png" %><br>
+    <p><%= link_to '新しくチームを作る', new_user_registration_path %></p>
+	<p><%= link_to '既存のチームに参加', new_user_session_path %></p>
+    <% end %>
+</div>

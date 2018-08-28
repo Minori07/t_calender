@@ -47,6 +47,7 @@
 						<% if d <= l_day %>
 						<% d_day = Date.new(@t.year,@t.month,d) %>
 						<%= link_to d, date_list_path(d_day) %>
+						<p><%= current_user.members.where(date: d_day).length %></p>
 						<% end %>
 						<% d += 1 %>
 						<% i += 1 %>

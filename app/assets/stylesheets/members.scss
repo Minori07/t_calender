@@ -11,15 +11,69 @@ header{
 	height: 60px;
 	display: flex;
 	color: white;
+	font-size: 20px;
 }
 
+ul{
+	display: flex;
+	list-style: none;
+}
+li{
+	padding-right: 50px;
+}
 
-header img{
-	width: 10%;
+.geer{
 	position: fixed;
-	top: 10px;	
-	right: 10px;
+	top: 8px;
+	right: -15px;
+}
+.geer img{
+	width: 60%;
 }
 .container{
 	margin-top: 60px;
+}
+
+.calender th{
+	font-family: 'Bradley Hand',sans-serif;
+	font-weight: nomal;
+	background-color: #dcdcdc;
+	color: gray;
+	padding: 3px;
+	width: 10%;
+}
+.calender td{
+	background-color: #fafafa;
+	padding-bottom: 50px;
+	font-size: 12px;
+}
+
+.delete_button{
+	background-image: url("/images/delete.png");
+	background-size: 25px;
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+ .new_box{
+ 	padding-top: 5px;
+ 	padding-bottom: 20px;
+ 	margin:  10px 0px 15% 15%;
+ 	background-color: #fbfbfb;
+ 	box-shadow: 2px 2px 10px 0px lightgray; 
+ 	border-radius: 20px;
+ 	width: 70%;
+ 	text-align: center;
+ 	position: fixed;
+ 	top: 100px;
+ 	// display: none;
+ }
+
+ .sbm{
+ 	padding: 0px 20px;
+	display: flex;
+	justify-content: space-between;
+	color: blue;
+	font-size: 15px;
 }

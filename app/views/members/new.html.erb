@@ -1,11 +1,13 @@
 <header>
-	<%= link_to image_tag('geer.png'), members_cfg_path %>
+	<div class="geer"">
+		<%= link_to image_tag('geer.png'), members_cfg_path %>
+	</div>
 </header>
 <div class=container>
 	<div style="width: 300px;">
 	  <%= form_for(@member) do |f| %>
 	  <div>
-	    <%= f.label :name %>
+	    <%= "名前" %>
 	    <%= f.text_field :name, size: 20 %>
 	  </div>
 	  <div>

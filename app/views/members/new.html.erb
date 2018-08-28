@@ -1,0 +1,19 @@
+<header>
+	<%= link_to image_tag('geer.png'), members_cfg_path %>
+</header>
+<div class=container>
+	<div style="width: 300px;">
+	  <%= form_for(@member) do |f| %>
+	  <div>
+	    <%= f.label :name %>
+	    <%= f.text_field :name, size: 20 %>
+	  </div>
+	  <div>
+	    <%= f.label :date %>
+	    <%= f.date_select :date %>
+	  </div>
+	    <%= f.submit 'Submit' %>
+	  <% end %>
+	</div>
+	<p><%= link_to '一覧に戻る', members_url %></p>
+</div>

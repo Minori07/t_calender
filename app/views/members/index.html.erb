@@ -1,0 +1,13 @@
+<header>
+	< month >
+	<%= link_to image_tag('geer.png'), members_cfg_path %>
+</header>
+<div class=container>
+	<p><%= link_to 'new', new_member_path %></p>
+	<% @members.each do |member| %>
+		<p><%= member.name %></p>
+		<p><%= member.date %></p>
+		<p><%= link_to 'Edit', edit_member_path(member) %></p>
+	    <p><%= link_to 'Delete', member_path(member), method: :delete %></p>
+	<% end %>
+</div>

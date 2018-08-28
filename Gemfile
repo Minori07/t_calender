@@ -37,6 +37,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Devise
 gem 'devise'
 
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
+
 gem 'ffi', '1.9.18'
 
 group :development, :test do

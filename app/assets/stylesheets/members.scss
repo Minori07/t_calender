@@ -48,12 +48,34 @@ li{
 	font-size: 12px;
 }
 
+.m_list table{
+	background-color: #fafafa;
+	border-bottom: 3px solid white;
+	width: 100%;
+	display: flex;
+}
+.user p{
+	background-color: #fafafa;
+	padding: 15px;
+	border-bottom: 3px solid white;
+	color: gray;
+}
+
 .delete_button{
 	background-image: url("/images/delete.png");
 	background-size: 25px;
 	margin: 10px;
 	width: 30px;
 	height: 30px;
+}
+
+.join{
+	background-color: #66cdaa;
+	margin: 20px 25%;
+	border-radius: 10px;
+	width: 50%;
+	text-align: center;
+	padding: 10px;
 }
 
  .new_box{
@@ -67,7 +89,7 @@ li{
  	text-align: center;
  	position: fixed;
  	top: 100px;
- 	// display: none;
+ 	display: none;
  }
 
  .sbm{

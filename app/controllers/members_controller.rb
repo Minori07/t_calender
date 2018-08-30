@@ -4,6 +4,7 @@ class MembersController < ApplicationController
   def index
   	@days = []
   	@t = Time.now
+  	@memos = current_user.memos
   end
 
   def show
@@ -19,6 +20,7 @@ class MembersController < ApplicationController
   def month
   	@days = []
   	@t = DateTime.parse(params[:date])
+  	@memos = current_user.memos
   end
 
   def new

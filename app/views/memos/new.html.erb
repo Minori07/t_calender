@@ -1,0 +1,41 @@
+<%= form_for(@memo) do |f| %>
+<header>
+	<ul>
+		<li><%= link_to image_tag('left.png'), members_url %></li>
+		<li><%= @date %></li>
+	</ul>
+	<div class="geer"">
+    	<%= link_to image_tag('geer.png'), members_cfg_path %>
+	</div>
+</header>
+	</div>
+</div>
+<div class="container">
+<div class="title">
+    <div style="margin: 15px; color: gray; padding: 10px; border-bottom: solid 1.5px lightgray;">
+    	<p>カテゴリ選択　▽ </p>
+     <%= f.select :category, [["練習", "1"], ["連絡", "2"],["なしに変更", "3"],["その他", "4"],["選択なし", "0"]] %>
+    </div>
+    <div style = "display: none;">
+	<%= f.date_select :date, :selected => DateTime.parse(@date) %>
+</div>
+
+</div>
+<div class="join"><%= f.submit '登録'%></div>
+</div>
+<% end %>
+
+<div class="m_new_box">
+    <%= form_for(@memo) do |f| %>
+    <div class="sbm">
+      <p><%= '戻る' %></p>
+      <p><%= f.submit '登録'%></p>
+    </div>
+    <div style="margin: 15px; background-color: white;
+    padding: 10px;">
+      <%= f.select :category, [["練習", "1"], ["連絡", "2"],["なしに変更", "3"],["その他", "4"],["選択なし", "0"]] %>
+    </div>
+    <%= f.date_select :date, :value => params[:date] %>
+
+    <% end %>
+</div>

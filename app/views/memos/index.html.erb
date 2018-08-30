@@ -1,0 +1,12 @@
+<div class="container">
+	<% @memos.each do |memo| %>
+	<div class="task">
+		<table>
+			<tr>
+				<td><%= button_to ' ', memo_path(memo), method: :delete ,class: "delete_button", data: { confirm: '削除しますか？' }%></td>
+				<td><%= link_to memo.date.try(:strftime, "%Y/%m/%d"), edit_memo_path(memo), class:'list-memos' %></td>
+			</tr>
+		</table>
+	</div>
+	<% end %>
+</div>

@@ -1,7 +1,12 @@
+<% c = ["選択なし","練習","連絡","練習なし","その他"] %>
+<% current_user.memos.each do |memo| %>
 <header>
 	<ul>
 		<li><%= link_to image_tag('left.png'), members_url %></li>
 		<li><%= @date.strftime("%m/%d") %></li>
+		<% if memo.date == @date %>
+		<%= c[memo.category] %>
+		<% end %>
 	</ul>
 	<div class="geer"">
     	<%= link_to image_tag('geer.png'), members_cfg_path %>
@@ -9,6 +14,22 @@
 </header>
 
 <div class="container">
+	<div class="info">
+		<% if memo.date == @date %>
+	  	<table>
+	      <td>連絡事項(カテゴリ変更):　</td>
+	      <% if memo.title == nil && memo.content == nil %>
+	      <td><%= link_to 'なし' ,edit_memo_path(memo)%></td>
+	      <% else%>
+	      <td><%= link_to memo.title ,edit_memo_path(memo)%></td>
+	      <% end %>
+	    </table>
+	    <% end %>
+	</div>
+
+</div>
+<% end %>
+
   <div class="m_list">
   <% @members.each do |member| %>
         <table>
@@ -20,7 +41,6 @@
   <% end %>
   </div>
   <div class="join">参加する</div>
-</div>
 
 
 <div class="new_box">

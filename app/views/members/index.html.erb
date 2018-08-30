@@ -1,3 +1,4 @@
+<% c = ["none","yellow","lightgreen","red","lightblue"] %>
 <header>
 	<ul>
 	<li><%= link_to image_tag('left.png'), controller: 'members', action: 'month', date: @t.prev_month  %></li>
@@ -46,8 +47,19 @@
 					<td>
 						<% if d <= l_day %>
 						<% d_day = Date.new(@t.year,@t.month,d) %>
+						<% if current_user.memos.where(date: d_day).length != 0 %>
+						<% @memos.each do |memo| %>
+						<% if memo.date == d_day %>
 						<%= link_to d, date_list_path(d_day) %>
+						<div style="background-color: <%= c[memo.category] %>; opacity: 0.5;">
 						<p><%= current_user.members.where(date: d_day).length %></p>
+						</div>
+						<% end %>
+						<% end %>
+						<% else %>
+						<%= link_to d, controller: 'memos', action: 'new', date: d_day %>
+						<p class="n_memo"><%= "　" %></p>	
+						<% end %>
 						<% end %>
 						<% d += 1 %>
 						<% i += 1 %>
@@ -58,3 +70,5 @@
 		</table>
 	</div>
 </div>
+
+

@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_064027) do
+ActiveRecord::Schema.define(version: 2018_08_30_111701) do
 
   create_table "members", force: :cascade do |t|
     t.string "name", null: false
     t.date "date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "memos", force: :cascade do |t|
+    t.date "date"
+    t.integer "category", null: false
+    t.string "title"
+    t.text "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

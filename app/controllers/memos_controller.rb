@@ -25,7 +25,7 @@ class MemosController < ApplicationController
 	def update
 	  @memo = target_memo params[:id]
 	  @memo.update(memo_params)
-	  redirect_to members_url
+	  redirect_to date_list_path(@memo.date)
 	end
 
 	def destroy

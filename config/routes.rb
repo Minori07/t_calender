@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 	get 'members/cfg'
 	get 'members/month'
+  get 'members/help'
 	get 'members/list/:date', to: 'members#list', as: 'date_list'
     devise_for :users
     resources :members

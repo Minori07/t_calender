@@ -2,7 +2,7 @@
 <%= form_for(@memo) do |f| %>
 <header>
 	<ul>
-		<li><%= link_to image_tag('left.png'), date_list_path(@memo.date) %></li>
+		<li><%= link_to image_tag('left.png'), date_list_path(@memo.date)  %></li>
 		<li><%= @memo.date %></li>
 		<%= f.select :category, [["練習", "1"], ["連絡", "2"],["なしに変更", "3"],["その他", "4"],["選択なし", "0"]] %>
 	</ul>

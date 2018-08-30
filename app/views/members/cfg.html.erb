@@ -9,6 +9,6 @@
 		<p>▶︎ email:　<%= current_user.email %></p>
 		<p>▶︎ <%= link_to 'チーム情報の変更', edit_user_registration_path %></p>
 		<p>▶︎ <%= link_to 'ログアウト', destroy_user_session_path, method: :delete%></p>
-		<p>▶︎ ヘルプ</p>
+		<p>▶︎ <%= link_to 'ヘルプ', members_help_path %></p>
 	</div>
 </div>

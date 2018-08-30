@@ -40,7 +40,7 @@ class MembersController < ApplicationController
   def update
     @member = target_member params[:id]
     @member.update(member_params)
-    redirect_to @member
+    redirect_to date_list_path(@member.date)
   end
 
   def destroy
@@ -50,6 +50,9 @@ class MembersController < ApplicationController
   end
 
   def cfg
+  end
+
+  def help
   end
 
   private

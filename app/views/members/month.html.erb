@@ -51,7 +51,7 @@
 						<% @memos.each do |memo| %>
 						<% if memo.date == d_day %>
 						<%= link_to d, date_list_path(d_day) %>
-						<span style="color: gray;font-size: 5px;"><%= memo.title %></span>
+						<span style="color: gray;font-size: 5%;"><%= memo.title %></span>
 						<div style="background-color: <%= c[memo.category] %>; opacity: 0.5;">
 						<p><%= current_user.members.where(date: d_day).length %></p>
 						</div>

@@ -1,0 +1,18 @@
+<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
+{
+  "name": "Team's Calender",
+  "short_name": "T_calender",
+  "start_url": "/",
+  "icons": [
+  "icons": [
+    {
+      "src": "<%=image_path("icon.png")%>",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

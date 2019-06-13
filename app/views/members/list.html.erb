@@ -2,7 +2,7 @@
 <% current_user.memos.each do |memo| %>
 <header>
 	<ul>
-		<li><%= link_to image_tag('left.png'), members_url %></li>
+		<li><%= link_to image_tag('left.png'), controller: 'members', action: 'month', date: @date %></li>
 		<li><%= @date.strftime("%m/%d") %></li>
 		<% if memo.date == @date %>
 		<%= c[memo.category] %>

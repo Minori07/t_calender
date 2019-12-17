@@ -43,7 +43,7 @@ gem 'devise'
 gem 'jquery-rails' 
 gem 'jquery-ui-rails'
 
-gem 'ffi', '1.9.18'
+gem 'ffi', '1.9.24'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
